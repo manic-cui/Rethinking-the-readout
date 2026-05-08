@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Eval outputs
+results/
+*.json.tmp

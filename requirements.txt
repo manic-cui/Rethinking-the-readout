@@ -1,0 +1,8 @@
+torch>=2.1
+torchvision>=0.16
+transformers>=4.46
+safetensors>=0.4
+numpy>=1.24
+scikit-learn>=1.3
+Pillow>=10
+fvcore>=0.1.5
