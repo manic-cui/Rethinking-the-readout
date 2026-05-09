@@ -23,9 +23,9 @@ The release contains:
 | VideoMAE-Base      | `pvp_heads/videomae_k400_vpvp.pt`          | **0.9528**            |
 | Qwen3-VL-8B (vision tower) | `pvp_heads/qwen3vl_8b_vpvp.pt`     | **0.9778**            |
 
-All heads are trained on the AIGVDBench `Open-Sora` train split with a
-**frozen** backbone (no LoRA, no fine-tuning), and evaluated on the 20-generator
-Open-Source test split (3000 real + 60000 fake = 63000 videos).
+All heads are trained with a **frozen** backbone (no LoRA, no fine-tuning),
+and evaluated on the 20-generator Open-Source test split (3000 real +
+60000 fake = 63000 videos).
 
 ## Install
 
@@ -70,7 +70,7 @@ in metric reports (e.g. `T2V/Wan2.1`).
 ```bash
 cd src
 
-# VideoMAE (the 0.9528 row in Tab. 5)
+# VideoMAE (the 0.9528 row in Tab. 1)
 python eval_opensource.py \
     --backbone         videomae_k400 \
     --backbone_weights /path/to/videomae-base-finetuned-kinetics \
@@ -114,7 +114,7 @@ JSON file containing the full per-generator breakdown.
 ## Repo layout
 
 ```
-opensource/
+.
 ├── README.md                    (this file)
 ├── requirements.txt
 ├── src/
