@@ -12,8 +12,8 @@ of frame images (one image per frame).
 
 Frames are uniformly sub-sampled to ``num_frames`` indices, center-cropped to
 the shorter side, resized to ``crop_size``, and normalized with the dataset
-mean/std (TimeSformer convention; the eval loop later renormalizes to each
-backbone's expected statistics).
+mean/std (0.45 / 0.225; the eval loop later renormalizes to the backbone's
+expected statistics).
 """
 import glob
 import os

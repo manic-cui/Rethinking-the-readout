@@ -16,13 +16,10 @@ Usage:
         --batch_size   32 \
         --out_json     results/videomae_open_source.json
 
-Expected mga AUC on the Open-Source split with the released checkpoints
+Expected mga AUC on the Open-Source split with the released checkpoint
 (20 generators, 3000 real + 60000 fake videos):
 
-    timesformer_k400  ->  0.9124
-    uniformerv2_k400  ->  0.9356
-    videomae_k400     ->  0.9528
-    qwen3vl_8b        ->  0.9778
+    videomae_k400     ->  0.9528   (V-PVP row of Table 1)
 """
 import argparse
 import json
@@ -43,16 +40,15 @@ from dataset import OpenSourceConfig, OpenSourceTest, collate
 from pvp_head import PVPHead
 
 
-# Frame counts the released checkpoints were trained at.
+# Frame count the released checkpoint was trained at.
 DEFAULT_NUM_FRAMES = {
-    "timesformer_k400":  8,
-    "videomae_k400":     16,
-    "uniformerv2_k400":  8,
-    "qwen3vl_8b":        8,
+    "videomae_k400": 16,
 }
 
-# Dataset-side normalization (TimeSformer convention) that ``OpenSourceTest``
-# applies. The eval loop renormalizes to each backbone's statistics below.
+# Dataset-side normalization applied by ``OpenSourceTest`` (mean 0.45 /
+# std 0.225). The eval loop undoes it and re-applies the backbone's own
+# statistics below; this is the exact preprocessing path the released
+# checkpoint was trained and evaluated with.
 DS_MEAN = (0.45, 0.45, 0.45)
 DS_STD  = (0.225, 0.225, 0.225)
 
@@ -133,7 +129,7 @@ def main():
     ap.add_argument("--data_root", required=True,
                     help="AIGVDBench root containing Real/ and OpenSource/ folders")
     ap.add_argument("--num_frames", type=int, default=0,
-                    help="0 -> backbone-default (8 for most; 16 for VideoMAE)")
+                    help="0 -> backbone default (16 for VideoMAE)")
     ap.add_argument("--batch_size", type=int, default=32)
     ap.add_argument("--num_workers", type=int, default=8)
     ap.add_argument("--threshold", type=float, default=0.5)

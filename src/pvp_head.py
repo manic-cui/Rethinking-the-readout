@@ -41,7 +41,7 @@ class PVPHead(nn.Module):
     """Dual-stream V-PVP head.
 
     Args:
-        agg_name: ``"velocity_gated"`` (V-PVP) or ``"plain_attn"`` (ablation).
+        agg_name: ``"velocity_gated"`` (the V-PVP readout).
         D:        embedding dim of the frozen backbone.
         hidden:   internal channel width (must be even; split between z and r
                   streams, hidden/2 each).
