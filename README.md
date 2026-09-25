@@ -114,7 +114,7 @@ the full per-generator breakdown.
         └── genvidbench_videomae_auc0.9375.pt
 ```
 
-## Method (one paragraph)
+## Method
 
 Given a pre-trained video transformer producing patch tokens
 `z ∈ ℝ^{B×P×T'×D}`, V-PVP computes the velocity field
