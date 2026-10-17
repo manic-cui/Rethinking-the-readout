@@ -15,6 +15,8 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-2f4fd6.svg)](https://manic-cui.github.io/projects/rethinking-the-readout/)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://arxiv.org/abs/2607.15321)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.15321)
+[![HF Paper](https://img.shields.io/badge/%F0%9F%A4%97%20Paper-Hugging%20Face-ffd21e.svg)](https://huggingface.co/papers/2607.15321)
+[![HF Model](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Weights-ffd21e.svg)](https://huggingface.co/mannicui0/Rethinking-the-readout)
 [![Python](https://img.shields.io/badge/Python-3.13%20tested-yellow.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -22,7 +24,7 @@
 
 [English](README.md) · [简体中文](README_zh-CN.md)
 
-[🌐 项目主页](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 论文](https://arxiv.org/abs/2607.15321) · [🧭 方法](#-方法) · [📊 实验结果](#-实验结果) · [🚀 快速开始](#-快速开始) · [📚 引用](#-引用)
+[🌐 项目主页](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 论文](https://arxiv.org/abs/2607.15321) · [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout) · [🧭 方法](#-方法) · [📊 实验结果](#-实验结果) · [🚀 快速开始](#-快速开始) · [📚 引用](#-引用)
 
 <img src="assets/teaser.jpg" width="95%" alt="Readout 是 AIGV 检测的瓶颈：GAP 或 CLS 读出把 patch 级动态平均掉了。">
 
@@ -40,6 +42,7 @@ AI 生成视频（AIGV）中的伪影往往来自帧与帧之间的不一致，�
 
 ## 📰 动态
 
+- **2026.10** &nbsp;代码和权重同步发布到 [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout)，并建立了[论文页面](https://huggingface.co/papers/2607.15321)。
 - **2026.09** &nbsp;论文被 **NeurIPS 2026** 接收。
 - **2026.07** &nbsp;论文公开于 [arXiv](https://arxiv.org/abs/2607.15321)。
 - **2026.05** &nbsp;发布代码和 V-PVP head 权重。
@@ -129,6 +132,12 @@ AIGVDBench 开源划分（20 个生成器）和 GenVidBench-143k（跨来源协�
 | `pvp_heads/genvidbench_videomae_auc0.9375.pt` | VideoMAE-B/16 K400，冻结 | GenVidBench-143k 跨来源协议 | **0.9375** |
 
 两个 head 都是 `PVPHead("velocity_gated", D=768)` 的 `state_dict`（`src/pvp_head.py`，492,674 个参数），训练时骨干完全冻结（不使用 LoRA，也不微调）。`eval_opensource.py` 实现了 AIGVDBench Open-Source 评测（3000 个真实视频 + 60000 个生成视频，共 63000 个）；GenVidBench head 的说明见 [`checkpoints/README.md`](checkpoints/README.md)。
+
+两个 head 也发布在 [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout)：
+
+```bash
+hf download mannicui0/Rethinking-the-readout --include "checkpoints/*" --local-dir .
+```
 
 ---
 

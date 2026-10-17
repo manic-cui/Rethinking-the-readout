@@ -15,6 +15,8 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-2f4fd6.svg)](https://manic-cui.github.io/projects/rethinking-the-readout/)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://arxiv.org/abs/2607.15321)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.15321)
+[![HF Paper](https://img.shields.io/badge/%F0%9F%A4%97%20Paper-Hugging%20Face-ffd21e.svg)](https://huggingface.co/papers/2607.15321)
+[![HF Model](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Weights-ffd21e.svg)](https://huggingface.co/mannicui0/Rethinking-the-readout)
 [![Python](https://img.shields.io/badge/Python-3.13%20tested-yellow.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -22,7 +24,7 @@
 
 [English](README.md) · [简体中文](README_zh-CN.md)
 
-[🌐 Project Page](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 Paper](https://arxiv.org/abs/2607.15321) · [🧭 Method](#-how-it-works) · [📊 Results](#-results) · [🚀 Quick Start](#-quick-start) · [📚 Citation](#-citation)
+[🌐 Project Page](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 Paper](https://arxiv.org/abs/2607.15321) · [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout) · [🧭 Method](#-how-it-works) · [📊 Results](#-results) · [🚀 Quick Start](#-quick-start) · [📚 Citation](#-citation)
 
 <img src="assets/teaser.jpg" width="95%" alt="The readout is the bottleneck for AIGV detection: patch-level dynamics are averaged away by GAP or CLS readouts.">
 
@@ -40,6 +42,7 @@ AI-generated videos (AIGVs) typically contain subtle temporal artifacts that ari
 
 ## 📰 News
 
+- **2026.10** &nbsp;Code and weights are also on [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout), with a [paper page](https://huggingface.co/papers/2607.15321).
 - **2026.09** &nbsp;Accepted to **NeurIPS 2026**.
 - **2026.07** &nbsp;Paper released on [arXiv](https://arxiv.org/abs/2607.15321).
 - **2026.05** &nbsp;Code and V-PVP head checkpoints released.
@@ -133,6 +136,12 @@ Both heads are `state_dict`s of `PVPHead("velocity_gated", D=768)`
 frozen (no LoRA, no fine-tuning). `eval_opensource.py` implements the
 AIGVDBench Open-Source evaluation (3000 real + 60000 fake = 63000 videos);
 see [`checkpoints/README.md`](checkpoints/README.md) for the GenVidBench head.
+
+Both heads are also on [🤗 Hugging Face](https://huggingface.co/mannicui0/Rethinking-the-readout):
+
+```bash
+hf download mannicui0/Rethinking-the-readout --include "checkpoints/*" --local-dir .
+```
 
 ---
 
