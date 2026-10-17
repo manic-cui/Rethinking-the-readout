@@ -17,6 +17,7 @@
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.15321)
 [![Python](https://img.shields.io/badge/Python-3.13%20tested-yellow.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/manic-cui/Rethinking-the-readout?style=social)](https://github.com/manic-cui/Rethinking-the-readout)
 
 [English](README.md) · [简体中文](README_zh-CN.md)
@@ -205,6 +206,7 @@ head 的输入是形状为 `(B, P, T', D)` 的 VideoMAE patch token。
 .
 ├── README.md
 ├── README_zh-CN.md
+├── LICENSE
 ├── requirements.txt
 ├── assets/                      README 中使用的图片
 ├── src/
@@ -244,3 +246,9 @@ head 的输入是形状为 `(B, P, T', D)` 的 VideoMAE patch token。
 - **Issues** &nbsp;[github.com/manic-cui/Rethinking-the-readout/issues](https://github.com/manic-cui/Rethinking-the-readout/issues)
 - **邮箱** &nbsp;`mannicui@berkeley.edu`
 - **个人主页** &nbsp;[manic-cui.github.io](https://manic-cui.github.io/)
+
+---
+
+## ⚖️ 许可证
+
+代码以 [MIT 许可证](LICENSE) 发布。VideoMAE 骨干权重不包含在本仓库中，其使用遵循各自的许可证。
