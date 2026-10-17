@@ -6,12 +6,13 @@
 
 **V-PVP：速度门控的 Patch 速度刻画（Velocity-Gated Patch Velocity Profiling）**
 
-Manni Cui<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> · Ruiqi Liu<sup>2</sup> · Dianyuan Zou<sup>1</sup> · Jianglan Wei<sup>1</sup> · Han Zhou<sup>1</sup> · Yu Liu<sup>1</sup> · Jingrui Xu<sup>1</sup> · Wenhao Wang<sup>4,†</sup> · Zhenyu Zhang<sup>1,†</sup>
+[Manni Cui](https://manic-cui.github.io/)<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> · Ruiqi Liu<sup>2</sup> · Dianyuan Zou<sup>1</sup> · Jianglan Wei<sup>1</sup> · Han Zhou<sup>1</sup> · Yu Liu<sup>1</sup> · Jingrui Xu<sup>1</sup> · Wenhao Wang<sup>4,†</sup> · Zhenyu Zhang<sup>1,†</sup>
 
 <sup>1</sup>华中科技大学 &nbsp; <sup>2</sup>中国科学院自动化研究所 &nbsp; <sup>3</sup>吉林大学 &nbsp; <sup>4</sup>Vast Intelligence Lab
 
 <sub>\* 共同第一作者 &nbsp; † 通讯作者</sub>
 
+[![Project Page](https://img.shields.io/badge/Project-Page-2f4fd6.svg)](https://manic-cui.github.io/projects/rethinking-the-readout/)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://arxiv.org/abs/2607.15321)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.15321)
 [![Python](https://img.shields.io/badge/Python-3.13%20tested-yellow.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -20,7 +21,7 @@ Manni Cui<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> �
 
 [English](README.md) · [简体中文](README_zh-CN.md)
 
-[📄 论文](https://arxiv.org/abs/2607.15321) · [🧭 方法](#-方法) · [📊 实验结果](#-实验结果) · [🚀 快速开始](#-快速开始) · [📚 引用](#-引用)
+[🌐 项目主页](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 论文](https://arxiv.org/abs/2607.15321) · [🧭 方法](#-方法) · [📊 实验结果](#-实验结果) · [🚀 快速开始](#-快速开始) · [📚 引用](#-引用)
 
 <img src="assets/teaser.jpg" width="95%" alt="Readout 是 AIGV 检测的瓶颈：GAP 或 CLS 读出把 patch 级动态平均掉了。">
 
@@ -242,3 +243,4 @@ head 的输入是形状为 `(B, P, T', D)` 的 VideoMAE patch token。
 
 - **Issues** &nbsp;[github.com/manic-cui/Rethinking-the-readout/issues](https://github.com/manic-cui/Rethinking-the-readout/issues)
 - **邮箱** &nbsp;`mannicui@berkeley.edu`
+- **个人主页** &nbsp;[manic-cui.github.io](https://manic-cui.github.io/)

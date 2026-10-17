@@ -6,12 +6,13 @@
 
 **V-PVP: Velocity-Gated Patch Velocity Profiling**
 
-Manni Cui<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> · Ruiqi Liu<sup>2</sup> · Dianyuan Zou<sup>1</sup> · Jianglan Wei<sup>1</sup> · Han Zhou<sup>1</sup> · Yu Liu<sup>1</sup> · Jingrui Xu<sup>1</sup> · Wenhao Wang<sup>4,†</sup> · Zhenyu Zhang<sup>1,†</sup>
+[Manni Cui](https://manic-cui.github.io/)<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> · Ruiqi Liu<sup>2</sup> · Dianyuan Zou<sup>1</sup> · Jianglan Wei<sup>1</sup> · Han Zhou<sup>1</sup> · Yu Liu<sup>1</sup> · Jingrui Xu<sup>1</sup> · Wenhao Wang<sup>4,†</sup> · Zhenyu Zhang<sup>1,†</sup>
 
 <sup>1</sup>Huazhong University of Science and Technology &nbsp; <sup>2</sup>Institute of Automation, Chinese Academy of Sciences &nbsp; <sup>3</sup>Jilin University &nbsp; <sup>4</sup>Vast Intelligence Lab
 
 <sub>\* Equal contribution &nbsp; † Corresponding author</sub>
 
+[![Project Page](https://img.shields.io/badge/Project-Page-2f4fd6.svg)](https://manic-cui.github.io/projects/rethinking-the-readout/)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-4b44ce.svg)](https://arxiv.org/abs/2607.15321)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.15321)
 [![Python](https://img.shields.io/badge/Python-3.13%20tested-yellow.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -20,7 +21,7 @@ Manni Cui<sup>1,\*</sup> · Ziheng Qin<sup>2,\*</sup> · ZiAn Wang<sup>3</sup> �
 
 [English](README.md) · [简体中文](README_zh-CN.md)
 
-[📄 Paper](https://arxiv.org/abs/2607.15321) · [🧭 Method](#-how-it-works) · [📊 Results](#-results) · [🚀 Quick Start](#-quick-start) · [📚 Citation](#-citation)
+[🌐 Project Page](https://manic-cui.github.io/projects/rethinking-the-readout/) · [📄 Paper](https://arxiv.org/abs/2607.15321) · [🧭 Method](#-how-it-works) · [📊 Results](#-results) · [🚀 Quick Start](#-quick-start) · [📚 Citation](#-citation)
 
 <img src="assets/teaser.jpg" width="95%" alt="The readout is the bottleneck for AIGV detection: patch-level dynamics are averaged away by GAP or CLS readouts.">
 
@@ -262,3 +263,4 @@ If you find this work useful, please cite:
 
 - **Issues** &nbsp;[github.com/manic-cui/Rethinking-the-readout/issues](https://github.com/manic-cui/Rethinking-the-readout/issues)
 - **Email** &nbsp;`mannicui@berkeley.edu`
+- **Homepage** &nbsp;[manic-cui.github.io](https://manic-cui.github.io/)
